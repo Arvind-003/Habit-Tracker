@@ -3,6 +3,8 @@ const app=express();
 const port=8000;
 const expressLayouts=require('express-ejs-layouts');
 
+const db=require('./config/mongoose');
+
 // first i need to tell in which folder my app look out for static file
 app.use(express.static('./assets'));
 
