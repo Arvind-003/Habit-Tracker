@@ -3,6 +3,9 @@ const app=express();
 const port=8000;
 const expressLayouts=require('express-ejs-layouts');
 
+// first i need to tell in which folder my app look out for static file
+app.use(express.static('./assets'));
+
 app.use(expressLayouts);
 
 //set up the view engine
