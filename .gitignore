@@ -1,0 +1,2 @@
+# we not want to send this to git , i can get it by typing npm install 
+node_modules/
