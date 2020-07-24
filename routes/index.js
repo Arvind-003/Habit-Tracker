@@ -9,6 +9,10 @@ console.log('router loaded');
 //accessing home controller action
 router.get('/',homeController.home);
 
+
+router.post('/create',homeController.create);
+router.get('/delete-habit',homeController.delete);
+
 //use express router to go users.js
 router.use('/users',require("./users"));
 

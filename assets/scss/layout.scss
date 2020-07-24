@@ -1,4 +1,31 @@
 body{
     margin: 0;
-    text-align: center;
+    // text-align: center;
+    background-color: green;
+    color: rgb(255, 255, 255);
+}
+header{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: rgb(8, 5, 5);
+    justify-content: space-between;
+    
+    color: orange;
+    div{
+
+        span{
+            color: rgb(255, 136, 0);
+            margin-left: 2rem;
+            font-size: 2rem;
+        }
+        i{
+            color: palegoldenrod;
+            margin-right: 2rem;
+            font-size: 3rem;
+        }
+    }
+    
+
 }

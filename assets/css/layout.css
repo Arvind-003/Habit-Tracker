@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background-color: green;
+  color: white; }
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 80px;
+  background-color: #080505;
+  justify-content: space-between;
+  color: orange; }
+  header div span {
+    color: #ff8800;
+    margin-left: 2rem;
+    font-size: 2rem; }
+  header div i {
+    color: palegoldenrod;
+    margin-right: 2rem;
+    font-size: 3rem; }

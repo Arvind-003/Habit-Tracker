@@ -1,0 +1,24 @@
+
+.heading{
+    margin-left: 6rem;
+}
+
+form{
+    margin-left: 6rem;
+}
+.habit-list{
+    width: 20rem;
+    /* background-color: azure; */
+    margin-top: 4rem;
+    margin-left: 6rem;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li p{
+    
+    font-size: 1.3rem;
+}
