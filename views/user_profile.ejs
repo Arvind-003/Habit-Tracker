@@ -3,28 +3,38 @@
 <div class="habit-profile">
     <p><%= habit_profile.habit %></p>
     <p><%= habit_profile.time %></p>
-    
+
 </div>
 <main>
+    <% for(let i=0;i<7;i++){%>
     <div class="day">
-        <div class="date"><%= habit_profile.date %></div>
-        <form action="/users/update/?id=<%=habit_profile._id%>" method="POST">
-            <select name="status" >
-                <option value="ans"><%= habit_profile.status %></option>
+        
+        <form action="/users/update/?id=<%=habit_profile._id%>&date=<%=last_7_days_list[i].date%>" method="POST">
+            <select name="status">
+
+                <option selected disabled value=`${<%= habit_profile.days[0].status %>}`><%= last_7_days_list[i].status %> </option>
                 <option value="none">none</option>
-                <option value="Completed">Completed</option>
-                <option value="Not completed">Not Completed</option>
+                <option value="done">Done</option>
+                <option value="Not done">Not Done</option>
             </select>
             <button type="submit">update</button>
         </form>
+        <div>
+
+            <% if (last_7_days_list[i].status==='done') { %>
+            <div class="done"><i class="fas fa-check"></i></div>
+            <% } 
+           else if (last_7_days_list[i].status==='Not done') { %>
+            <div class="not_done"><i class="fas fa-times"></i></div>
+                <% } 
+             %>
+
+
+        </div>
+        <div class="date"><%= last_7_days_list[i].date %></div>
+
 
     </div>
+    <% } %>
+
 </main>
-
-
-
-
-
-
-
-

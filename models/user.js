@@ -11,15 +11,15 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    status:{
-        type:String
-    },
-    date:{
-        type:String
-    }
-    // days:{
-    //     type:Array
+    // status:{
+    //     type:String
+    // },
+    // date:{
+    //     type:String
     // }
+    days:{
+        type:Array
+    }
     
 
 },{

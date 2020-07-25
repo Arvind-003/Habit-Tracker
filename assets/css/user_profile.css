@@ -10,13 +10,38 @@ h1{
     align-items: center;
 
 }
-.day{
+/* main{
     background-color:black ;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-size: 1.4rem;
+
+} */
+.day{
+    /* background-color:black ; */
+    margin: auto;
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    margin-top: 4rem;
+    /* flex-wrap: wrap; */
+    
 
 }
 .date{
-    margin-right: 6rem;
+    margin-left: 6rem;
+}
+.done i{
+    color: rgb(17, 0, 255);
+    font-size: 2rem;
+    /* margin-left: 2rem; */
+}
+.not_done i{
+    color: rgb(109, 2, 2);
+    font-size: 2rem;
+    margin-left: 2rem;
 }

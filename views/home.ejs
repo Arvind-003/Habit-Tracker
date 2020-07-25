@@ -14,9 +14,12 @@
         <% for(let i of habit_list) {%>
             <li>
                 <p><%= i.habit %></p>
-                <a href="/delete-habit/?id=<%=i._id%>"><button>Delete</button></a>
+                <div class="button">
+                    <a href="/delete-habit/?id=<%=i._id%>"><button>Delete</button></a>
                 
-                <a href="/users/profile/?id=<%=i._id %>"><button>Profile</button></a>
+                    <a href="/users/profile/?id=<%=i._id %>"><button>Profile</button></a>
+                </div>
+                
                 
             </li>
             <%}

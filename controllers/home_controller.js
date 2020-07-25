@@ -20,18 +20,22 @@ module.exports.home=function(req,res){
 //get the added habit data
 module.exports.create=function(req,res){
     console.log(req.body);
+    let weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Satuurday"];
     let d=new Date();
-    let date= d.getDate()+" /"+d.getMonth()+"/"+d.getFullYear();
+    // let date= d.getDate()+" /"+d.getMonth()+"/"+d.getFullYear()+" , "+weekday[d.getDay()];
+    
+    let d1=new Date(d.getTime() - (0 * 24 * 60 * 60 * 1000));
+    let date=weekday[d1.getDay()]+"  ,"+d1.getDate()+"/"+d1.getMonth()+"/"+d1.getFullYear();
     console.log(date);
     User.create({
         habit:req.body.habit,
         time:req.body.time,
-        status:"none",
-        date:date
-        // days:{
-        //     status:"none",
-        //     date:date
-        // }
+        // status:"none",
+        // date:date
+        days:{
+            status:"none",
+            date:date
+        }
     },function(err,newHabit){
         if(err)
         {
