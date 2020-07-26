@@ -9,7 +9,7 @@
 
    > User can add their regular habits , Displays all habits of user, user can delete particular habit , and can navigate to particular habit history for last 1 week in the profile page.
 
-    ![Homepage](/images/home.png)
+ ![Homepage](/images/home.png)
 
 ---
 
@@ -62,7 +62,7 @@
 2. open downloaded folder in vs code
 
 3. Run following command
-  * npm install
+    * npm install
 
 4. connect to MongoDb
 5. run command `node index.js`
