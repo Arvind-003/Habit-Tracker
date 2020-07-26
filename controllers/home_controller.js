@@ -25,6 +25,7 @@ module.exports.create=function(req,res){
     // let date= d.getDate()+" /"+d.getMonth()+"/"+d.getFullYear()+" , "+weekday[d.getDay()];
     
     let d1=new Date(d.getTime() - (0 * 24 * 60 * 60 * 1000));
+    // let date=d1.getDate();
     let date=weekday[d1.getDay()]+"  ,"+d1.getDate()+"/"+d1.getMonth()+"/"+d1.getFullYear();
     console.log(date);
     User.create({
@@ -40,9 +41,12 @@ module.exports.create=function(req,res){
         if(err)
         {
             console.log("error while creating habit");
+            req.flash('error','habit allready exist');
+            res.redirect('back');
             return;
         }
         console.log(newHabit);
+        req.flash('success','Added Successfully');
         return res.redirect('back');
 
     });
@@ -61,6 +65,7 @@ module.exports.delete=function(req,res){
             return;
         }
         console.log("habit deleted");
+        req.flash('error','Deleted successfully');
         return res.redirect('back');
    });
     

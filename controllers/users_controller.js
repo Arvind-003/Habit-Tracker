@@ -17,8 +17,9 @@ module.exports.profile=function(req,res){
             
             let d=new Date();
             let d1=new Date(d.getTime() - (i * 24 * 60 * 60 * 1000));
+            // let date=d1.getDate();
             let date=weekday[d1.getDay()]+"  ,"+d1.getDate()+"/"+d1.getMonth()+"/"+d1.getFullYear();
-            // let date= d.getDate()+" /"+d.getMonth()+"/"+d.getFullYear()+" , "+weekday[d.getDay()];
+            
 
             let last_status= profileData.days.find(x=> x.date == date);
         
@@ -65,7 +66,7 @@ module.exports.update =function(req,res){
             data.days.push({date:date,status:req.body.status});
             data.save();
         }
-
+        req.flash('success','Updated Successfully');
         console.log(data);
         return res.redirect('back');
     });
